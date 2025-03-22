@@ -1,51 +1,50 @@
 {
-  "categories": [
-    {
-      "value": 40,
-      "heading": "Laptops"
-    },
-
-    {
-      "value": 100,
-      "heading": "Shoes"
-    },
-    {
-      "value": 80,
-      "heading": "Cameras"
-    },
+  "investmentCategories": [
     {
       "value": 60,
-      "heading": "Jeans"
+      "heading": "Stocks"
+    },
+    {
+      "value": 90,
+      "heading": "Mutual Funds"
+    },
+    {
+      "value": 75,
+      "heading": "Real Estate"
+    },
+    {
+      "value": 50,
+      "heading": "Cryptocurrency"
     }
   ],
 
-  "transaction": [
+  "transactions": [
     {
-      "id": "ksdnfkjsdfx",
-      "amount": 4000,
-      "quantity": 4,
-      "discount": 300,
+      "id": "txn_001",
+      "amount": 10000,
+      "investor_id": "inv_123",
+      "profit": 1200,
+      "status": "Completed"
+    },
+    {
+      "id": "txn_002",
+      "amount": 15000,
+      "investor_id": "inv_456",
+      "profit": 2000,
       "status": "Processing"
     },
     {
-      "id": "sdsdssdsd",
-      "amount": 5100,
-      "quantity": 2,
-      "discount": 900,
-      "status": "Processing"
+      "id": "txn_003",
+      "amount": 25000,
+      "investor_id": "inv_789",
+      "profit": 3500,
+      "status": "Completed"
     },
     {
-      "id": "sdsdcvsssdsd",
-      "amount": 13000,
-      "quantity": 91,
-      "discount": 0,
-      "status": "Shipped"
-    },
-    {
-      "id": "dfddddfd",
-      "amount": 2300,
-      "quantity": 4,
-      "discount": 2000,
+      "id": "txn_004",
+      "amount": 8000,
+      "investor_id": "inv_321",
+      "profit": 500,
       "status": "Processing"
     }
   ]

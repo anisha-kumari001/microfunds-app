@@ -1,9 +1,11 @@
 @import "mixin";
 @import "dashboard";
-@import "products";
+@import "projects";
 @import "chart";
 @import "dashboardapp";
 @import "mediaquery";
+@import "BuyInsurance";
+@import "./UserDashboard";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

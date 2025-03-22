@@ -15,7 +15,7 @@ const dashboard = () => {
       <main className="dashboard">
         <div className="bar">
           <BsSearch />
-          <input type="text" placeholder="Search for data, users, docs" />
+          <input type="text" placeholder="Search for investments, users, reports" />
           <FaRegBell />
           <img src={userImg} alt="User" />
         </div>
@@ -24,48 +24,48 @@ const dashboard = () => {
           <WidgetItem
             percent={40}
             amount={true}
-            value={340000}
-            heading="Revenue"
+            value={500000}
+            heading="Total Assets"
             color="rgb(0,115,255)"
           />
           <WidgetItem
-            percent={-14}
-            value={400}
-            heading="Users"
+            percent={-5}
+            value={1200}
+            heading="Active Investors"
             color="rgb(0 198 202)"
           />
           <WidgetItem
-            percent={80}
-            value={23000}
-            heading="Transactions"
+            percent={65}
+            value={45000}
+            heading="Investments Made"
             color="rgb(255 196 0)"
           />
           <WidgetItem
-            percent={30}
-            value={1000}
-            heading="Products"
+            percent={20}
+            value={150}
+            heading="Investment Plans"
             color="rgb(76 0 255)"
           />
         </section>
 
         <section className="graph-container">
           <div className="revenue-chart">
-            <h2>Revenue & Transaction</h2>
-            {/* Grapph here */}
+            <h2>Portfolio Growth & Transactions</h2>
+            {/* Graph here */}
             <BarChart
-              data_2={[300, 144, 433, 655, 237, 755, 190]}
-              data_1={[200, 444, 343, 556, 778, 455, 990]}
-              title_1="Revenue"
-              title_2="Transaction"
+              data_2={[400, 220, 500, 750, 300, 820, 250]}
+              data_1={[300, 550, 420, 650, 900, 500, 1100]}
+              title_1="Portfolio Growth"
+              title_2="Transactions"
               bgColor_1="rgb(0,115,255)"
               bgColor_2="rgba(53,162,235,0.8)"
             />
           </div>
 
           <div className="dashboard-categories">
-            <h2>Inventory</h2>
+            <h2>Portfolio Allocation</h2>
             <div>
-              {data.categories.map((i) => (
+              {data.investmentCategories.map((i) => (
                 <CategoryItem
                   key={i.heading}
                   heading={i.heading}
@@ -79,11 +79,11 @@ const dashboard = () => {
 
         <section className="transaction-container">
           <div className="gender-chart">
-            <h2>Gender Ratio</h2>
+            <h2>Investor Demographics</h2>
 
             <DoughnutChart
               labels={["Female", "Male"]}
-              data={[12, 19]}
+              data={[45, 55]}
               backgroundColor={["hsl(340,82%,56%)", "rgba(53,162,235,0.8)"]}
               cutout={90}
             />
@@ -93,7 +93,7 @@ const dashboard = () => {
             </p>
           </div>
 
-          <Table data={data.transaction} />
+          {data.transactions ? <Table data={data.transactions} /> : <p>No transactions available</p>}
         </section>
       </main>
     </div>

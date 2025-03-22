@@ -1,11 +1,11 @@
-.dashboard-product-box {
+.dashboard-project-box {
   background-color: white;
   padding: 2rem;
   overflow: auto;
   @include square(100%);
 }
 
-.create-product-btn {
+.create-project-btn {
   position: fixed;
   right: 2rem;
   top: 2rem;
@@ -19,7 +19,7 @@
   }
 }
 
-.product-management {
+.project-management {
   @include flex(row, center, unset);
   padding: 4rem;
 
@@ -151,7 +151,7 @@
   }
 }
 
-.transaction-product-card {
+.transaction-project-card {
   @include flex(row, unset, center, 1rem);
 
   > img {
