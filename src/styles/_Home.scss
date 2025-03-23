@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+$primary-color: #0077b6;
+$secondary-color: #00b4d8;
+$text-light: #fff;
+$text-dark: #333;
+$shadow-light: rgba(255, 255, 255, 0.2);
+$shadow-dark: rgba(0, 0, 0, 0.2);
+
+.home {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: $text-dark;
+  padding: 2rem;
+
+  .hero {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: $text-light;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px $shadow-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px $shadow-light;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+
+      .btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+
+        &.primary {
+          background: $text-light;
+          color: $primary-color;
+          &:hover {
+            background: darken($text-light, 10%);
+          }
+        }
+
+        &.secondary {
+          background: transparent;
+          border: 2px solid $text-light;
+          color: $text-light;
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .features {
+    margin-top: 3rem;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 1rem;
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+          font-size: 2.5rem;
+          color: $primary-color;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin: 0.5rem 0;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: #555;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .home {
+    .hero {
+      padding: 3rem 1.5rem;
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    .features {
+      h2 {
+        font-size: 2rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

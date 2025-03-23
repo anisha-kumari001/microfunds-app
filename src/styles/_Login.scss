@@ -1,0 +1,88 @@
+// Variables
+$primary-color: #f5f5f5;
+$card-bg: white;
+$border-color: #ccc;
+$hover-bg: #f0f0f0;
+$font-color: #333;
+$shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+// Global Styling
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-color;
+}
+
+// Card
+.login-card {
+  background: $card-bg;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  text-align: center;
+  width: 350px;
+}
+
+// Title
+.login-title {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+// Input Group
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    font-size: 14px;
+    color: $font-color;
+    margin-bottom: 5px;
+  }
+
+  select,
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+}
+
+// Info Text
+.login-info {
+  font-size: 14px;
+  color: darken($font-color, 20%);
+  margin: 15px 0;
+}
+
+// Google Button
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid $border-color;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $hover-bg;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

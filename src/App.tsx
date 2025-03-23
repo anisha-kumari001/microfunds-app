@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loader from "./components/Loader";
+import Home from "./pages/Home.tsx";
+import Login from "./components/Login.tsx";
 
 // Lazy-loaded Pages
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -42,17 +44,19 @@ const App = () => {
           <Route
             path="/"
             element={
-              <Link to="/admin/dashboard">
-                <button>Visit Dashboard</button>
-              </Link>
+              <Home/>
             }
           />
 
           {/* Admin Routes */}
           <Route path="/admin/dashboard" element={<Dashboard />} />
+
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/customer" element={<Customers />} />
           <Route path="/admin/transaction" element={<Transaction />} />
+           
+
+
 
           {/* Charts */}
           <Route path="/admin/chart/bar" element={<BarCharts />} />
@@ -72,7 +76,7 @@ const App = () => {
           {/* Updated Routes for Policies */}
           <Route path="/admin/transactions" element={<Transaction/>} /> {/* ✅ Better path name */}
          
-
+          <Route path="/login" element={<Login />} />     
 
        {/* User Routes */}
           <Route path="/user/dashboard" element={<UserDashboard />} />
